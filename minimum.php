@@ -4,7 +4,7 @@
    Plugin URI: https://minimum.digital
    description: >-
   A plugin for the website of Casanha
-   Version: 0.1
+   Version: 0.2
    Author: Dirk Mulder
    Author URI: https://dirk.app
    License: GPL2
