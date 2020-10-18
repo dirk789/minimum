@@ -19,7 +19,7 @@ function theme_gsap_script() {
 
     //swiperjs
     wp_register_style( 'swipercss', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
-    wp_enqueue_script( 'gsap-scroll-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
+    wp_enqueue_script( 'swiperjs', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
 
     if (is_page( 'Homepage' )) {
         wp_enqueue_script('homepage-animation', plugin_dir_url( __FILE__ ) . '/js/homepage.js', array(), false, true);
