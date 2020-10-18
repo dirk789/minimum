@@ -18,7 +18,7 @@ function theme_gsap_script() {
     wp_enqueue_script( 'gsap-js2', plugin_dir_url( __FILE__ ) . '/js/script.js', array(), false, true );
 
     if (is_page( 'Homepage' )) {
-        wp_enqueue_script('homepage-animation', plugin_dir_url( __FILE__ ) . '/js/homepage.js', array(), false,);
+        wp_enqueue_script('homepage-animation', plugin_dir_url( __FILE__ ) . '/js/homepage.js', array(), false, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
