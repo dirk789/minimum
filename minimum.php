@@ -20,10 +20,17 @@ function theme_gsap_script() {
     //swiperjs
     wp_register_style( 'swipercss', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
     wp_enqueue_script( 'swiperjs', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
+    
 
     if (is_page( 'Homepage' )) {
         wp_enqueue_script('homepage-animation', plugin_dir_url( __FILE__ ) . '/js/homepage.js', array(), false, true);
     }
 }
 add_action( 'wp_enqueue_scripts', 'theme_gsap_script' );
-?>
+
+
+//customize login page
+function my_login_stylesheet() {
+    wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__ ) . '/css/login.css' );
+}
+add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
