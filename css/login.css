@@ -1,3 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 body {
-    background: red !important;
+    background: url(/wp-content/uploads/2020/10/loginbg.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #2A3848;
+}
+
+.login h1 a {
+    background-image: url(/wp-content/uploads/2020/10/logo_a69d17f5-7dd8-407c-956a-b11ea147c52f_600x.svg);
+    background-size: 150px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    width: 150px;
+    outline: 0;
+    margin: auto;
+    display: block;
+    height: 60px;
+}
+
+.login form {
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.wp-core-ui .button-primary {
+    background: none;
+    color: #2A3848;
+    border: none;
+    border-bottom: 1px solid #2A3848;
+    border-radius: 0;
+}
+
+body #login #nav a, body #login #backtoblog a {
+    color: white;
 }
