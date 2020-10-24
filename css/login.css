@@ -8,7 +8,7 @@ body {
 }
 
 .login h1 a {
-    background-image: url(/wp-content/uploads/2020/10/logo_a69d17f5-7dd8-407c-956a-b11ea147c52f_600x.svg);
+    background-image: url(/wp-content/uploads/2020/10/casanha-white.svg);
     background-size: 150px;
     background-position: center center;
     background-repeat: no-repeat;
@@ -35,4 +35,20 @@ body {
 
 body #login #nav a, body #login #backtoblog a {
     color: white;
+}
+
+.login form .input, .login form input[type="checkbox"], .login input[type="text"] {
+    background: #E9E9EA;
+}
+
+input[type="color"], input[type="date"], input[type="datetime-local"], input[type="datetime"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], select, textarea {
+    border: none;
+}
+
+.wp-core-ui .button, .wp-core-ui .button-secondary {
+    color: #2A3848;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    border: none;
 }
