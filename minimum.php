@@ -18,8 +18,8 @@ function theme_gsap_script() {
     wp_enqueue_script( 'gsap-js2', plugin_dir_url( __FILE__ ) . '/js/script.js', array(), false, true );
 
     //swiperjs
-    wp_register_style( 'swipercss', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
-    wp_enqueue_script( 'swiperjs', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
+    // wp_register_style( 'swipercss', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
+    // wp_enqueue_script( 'swiperjs', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), false, true );
     
 
     if (is_page( 'Homepage' )) {
@@ -34,3 +34,6 @@ function my_login_stylesheet() {
     wp_enqueue_style( 'custom-login', plugin_dir_url( __FILE__ ) . '/css/login.css' );
 }
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
+
+//Mega menu PHP Files
+require 'menu.php';
