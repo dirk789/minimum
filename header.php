@@ -86,9 +86,12 @@ function casanhaheader_function() {
         <div class=\"mobile-menu-button\">
             <svg id=\"open-menu\" width=\"43\" height=\"11\" viewBox=\"0 0 43 11\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"43\" y1=\"1\" x2=\"17\" y2=\"0.999998\" stroke=\"black\" stroke-width=\"2\"/> <line x1=\"43\" y1=\"10\" x2=\"-8.74228e-08\" y2=\"10\" stroke=\"black\" stroke-width=\"2\"/> </svg> 
         </div>
-        <div class=\"mobile-menu\">";
-            
+        <div class=\"mobile-menu\">
+                <ul id=\"mobile-list\">
         
+        ";
+            
+                
                     $locations = get_nav_menu_locations();
                     if ( isset( $locations[ 'mega_menu' ] ) ) {
                         $menu = get_term( $locations[ 'mega_menu' ], 'nav_menu' );
@@ -109,7 +112,9 @@ function casanhaheader_function() {
                     }
 
 
-       echo "</div>
+       echo "
+        </ul>
+       </div>
     </header>
         ";
 }
