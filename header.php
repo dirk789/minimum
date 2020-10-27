@@ -18,9 +18,9 @@ function casanhaheader_function() {
                                     echo "<a href=\"{$item->url}\">{$item->title}</a>";
                                     if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
                                         echo "<div id=\"casanha-mega-menu-{$item->ID}\" class=\"mega-menu mega-menu__dropdown\">";
-                                            echo "<div class=/"mega-menu-inner/">";
+                                            echo "<div class=\"mega-menu-inner\">";
                                             dynamic_sidebar( 'mega-menu-widget-area-' . $item->ID );
-                                            echo "</div>"
+                                            echo "</div>";
                                         echo "</div>";
                                     }
                                 echo "</li>";
