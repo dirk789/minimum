@@ -51,8 +51,21 @@ function casanhaheader_function() {
                 echo "</ul>  
         </nav>"; 
 
+        //shopping cart
+        echo " 
+        <div class=\"header__cart\">";
+        echo WC()->cart->get_cart_contents_count();
+        echo "
+         <div class=\"header__mini-cart\">
+        ";
+
         woocommerce_mini_cart();
-        
+
+        echo "
+         </div>
+        </div>";
+
+
         echo "
     </header>
         ";
