@@ -18,7 +18,7 @@ function wpmm_init() {
                 if ( in_array( $css_class, $item->classes ) ) {
                     register_sidebar( array(
                         'id'   => 'mega-menu-widget-area-' . $item->ID,
-                        'name' => $item->title . ' - Mega Menu',
+                        'name' => $item->title . ' - Casanha Mega Menu',
                         'before_widget' => '',
                         'after_widget' => '', 
                       ) );
