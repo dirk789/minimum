@@ -84,12 +84,12 @@ function casanhaheader_function() {
                         }
                     }
 
-                echo "</ul>";
+                echo "</ul>  
+        </nav>"; 
 
-            do_shortcode("[woo_cart_but]");
-
-            echo "
-        </nav>
+        do_shortcode("[woo_cart_but]");
+        
+        echo "
     </header>
         ";
 }
