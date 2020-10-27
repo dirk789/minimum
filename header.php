@@ -58,8 +58,11 @@ function casanhaheader_function() {
                         }
                     }
 
-                echo "
-            </ul>
+                echo "</ul>";
+
+            do_shortcode("[woo_cart_but]");
+
+            echo "
         </nav>
     </header>
         ";
