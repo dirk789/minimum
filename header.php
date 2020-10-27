@@ -86,9 +86,30 @@ function casanhaheader_function() {
         <div class=\"mobile-menu-button\">
             <svg id=\"open-menu\" width=\"43\" height=\"11\" viewBox=\"0 0 43 11\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"43\" y1=\"1\" x2=\"17\" y2=\"0.999998\" stroke=\"black\" stroke-width=\"2\"/> <line x1=\"43\" y1=\"10\" x2=\"-8.74228e-08\" y2=\"10\" stroke=\"black\" stroke-width=\"2\"/> </svg> 
         </div>
-        <div class=\"mobile-menu\">
-            <h1>Menu</h1>
-        </div>
+        <div class=\"mobile-menu\">";
+            
+        
+                    $locations = get_nav_menu_locations();
+                    if ( isset( $locations[ 'mega_menu' ] ) ) {
+                        $menu = get_term( $locations[ 'mega_menu' ], 'nav_menu' );
+                        if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
+                            foreach ( $items as $item ) {
+                                echo "<li>";
+                                    echo "<a href=\"{$item->url}\">{$item->title}</a>";
+                                    if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
+                                        echo "<div id=\"casanha-mega-menu-{$item->ID}\" class=\"mega-menu mega-menu__dropdown\">";
+                                            echo "<div class=\"mega-menu-inner\">";
+                                            dynamic_sidebar( 'mega-menu-widget-area-' . $item->ID );
+                                            echo "</div>";
+                                        echo "</div>";
+                                    }
+                                echo "</li>";
+                            }
+                        }
+                    }
+
+
+       echo "</div>
     </header>
         ";
 }
