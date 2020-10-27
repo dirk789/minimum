@@ -51,7 +51,7 @@ function casanhaheader_function() {
                 echo "</ul>  
         </nav>"; 
 
-        do_shortcode(['custom-casanha-mini-cart']);
+        woocommerce_mini_cart();
         
         echo "
     </header>
