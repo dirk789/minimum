@@ -22,13 +22,11 @@ function casanhaheader_function() {
                             }
                         }
                     }
-                    
+
                 echo "
             </ul>
         </header>
         ";
-
-        return $html;
 }
 
 add_shortcode('casanhaheader', 'casanhaheader_function');
