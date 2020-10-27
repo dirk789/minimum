@@ -1,58 +1,22 @@
 <?php 
 
-// CART Function
-add_shortcode ('woo_cart_but', 'woo_cart_but' );
-/**
- * Create Shortcode for WooCommerce Cart Menu Item
- */
-function woo_cart_but() {
-	ob_start();
- 
-        $cart_count = WC()->cart->cart_contents_count; // Set variable for cart item count
-        $cart_url = wc_get_cart_url();  // Set Cart URL
-  
-        ?>
-        <li><a class="menu-item cart-contents" href="<?php echo $cart_url; ?>" title="My Basket">
-	    <?php
-        if ( $cart_count > 0 ) {
-       ?>
-            <span class="cart-contents-count"><?php echo $cart_count; ?></span>
-        <?php
-        }
-        ?>
-        </a></li>
-        <?php
-	        
-    return ob_get_clean();
- 
-}
+function custom_mini_cart() { 
+    echo '<a href="#" class="dropdown-back" data-toggle="dropdown"> ';
+    echo '<i class="fa fa-shopping-cart" aria-hidden="true"></i>';
+    echo '<div class="basket-item-count" style="display: inline;">';
+        echo '<span class="cart-items-count count">';
+            echo WC()->cart->get_cart_contents_count();
+        echo '</span>';
+    echo '</div>';
+    echo '</a>';
+    echo '<ul class="dropdown-menu dropdown-menu-mini-cart">';
+        echo '<li> <div class="widget_shopping_cart_content">';
+                  woocommerce_mini_cart();
+            echo '</div></li></ul>';
 
-add_filter( 'woocommerce_add_to_cart_fragments', 'woo_cart_but_count' );
-/**
- * Add AJAX Shortcode when cart contents update
- */
-function woo_cart_but_count( $fragments ) {
- 
-    ob_start();
-    
-    $cart_count = WC()->cart->cart_contents_count;
-    $cart_url = wc_get_cart_url();
-    
-    ?>
-    <a class="cart-contents menu-item" href="<?php echo $cart_url; ?>" title="<?php _e( 'View your shopping cart' ); ?>">
-	<?php
-    if ( $cart_count > 0 ) {
-        ?>
-        <span class="cart-contents-count"><?php echo $cart_count; ?></span>
-        <?php            
-    }
-        ?></a>
-    <?php
- 
-    $fragments['a.cart-contents'] = ob_get_clean();
-     
-    return $fragments;
-}
+      }
+       add_shortcode( '[custom-casanha-mini-cart]', 'custom_mini_cart' );
+
 
 // MAIN MENU
 
@@ -87,7 +51,7 @@ function casanhaheader_function() {
                 echo "</ul>  
         </nav>"; 
 
-        do_shortcode("[woo_cart_but]");
+        do_shortcode(['custom-casanha-mini-cart']);
         
         echo "
     </header>
