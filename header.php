@@ -1,6 +1,6 @@
 <?php 
 
-function casanhaheader_fuction() {
+function casanhaheader_function() {
     $html .= '
     <header>
             <ul class="mega-menu">';
