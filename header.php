@@ -84,7 +84,7 @@ function casanhaheader_function() {
 
         echo "
         <div class=\"mobile-menu-button\">
-            <svg width=\"43\" height=\"11\" viewBox=\"0 0 43 11\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"43\" y1=\"1\" x2=\"17\" y2=\"0.999998\" stroke=\"black\" stroke-width=\"2\"/> <line x1=\"43\" y1=\"10\" x2=\"-8.74228e-08\" y2=\"10\" stroke=\"black\" stroke-width=\"2\"/> </svg> 
+            <svg id=\"open-menu\" width=\"43\" height=\"11\" viewBox=\"0 0 43 11\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"> <line x1=\"43\" y1=\"1\" x2=\"17\" y2=\"0.999998\" stroke=\"black\" stroke-width=\"2\"/> <line x1=\"43\" y1=\"10\" x2=\"-8.74228e-08\" y2=\"10\" stroke=\"black\" stroke-width=\"2\"/> </svg> 
         </div>
         <div class=\"mobile-menu\">
             <h1>Menu</h1>
