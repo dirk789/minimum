@@ -1,7 +1,7 @@
 <?php 
 
 function casanhaheader_function() {
-    $html .= '
+    echo'
     <header>
             <ul class="casanha-mega-menu">';
                 
@@ -21,12 +21,10 @@ function casanhaheader_function() {
                             }
                         }
                     }
-                $html .= '
+                echo'
             </ul>
-        </header>
-        ';
-
-        return $html;
+        </header> '
+        
 }
 
 add_shortcode('casanhaheader', 'casanhaheader_function');
