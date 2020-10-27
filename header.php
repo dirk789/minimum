@@ -3,7 +3,7 @@
 function casanhaheader_function() {
     $html .= '
     <header>
-            <ul class="mega-menu">';
+            <ul class="casanha-mega-menu">';
                 
                     $locations = get_nav_menu_locations();
                     if ( isset( $locations[ 'mega_menu' ] ) ) {
@@ -13,7 +13,7 @@ function casanhaheader_function() {
                                 echo "<li>";
                                     echo "<a href=\"{$item->url}\">{$item->title}</a>";
                                     if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
-                                        echo "<div id=\"mega-menu-{$item->ID}\" class=\"mega-menu\">";
+                                        echo "<div id=\"casanha-mega-menu-{$item->ID}\" class=\"mega-menu\">";
                                             dynamic_sidebar( 'mega-menu-widget-area-' . $item->ID );
                                         echo "</div>";
                                     }
