@@ -96,10 +96,10 @@ function casanhaheader_function() {
                             foreach ( $items as $item ) {
                                 echo "<li>";
                                     echo "<a class=\"mobile-title\" href=\"{$item->url}\">{$item->title}</a>";
-                                    if ( is_active_sidebar( 'mobile-mega-menu-widget-area-' . $item->ID ) ) {
+                                    if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
                                         echo "<div class=\"mega-menu mega-menu__mobile\">";
                                             echo "<div class=\"mega-menu-inner\">";
-                                            dynamic_sidebar( 'mobile-mega-menu-widget-area-' . $item->ID );
+                                            dynamic_sidebar( 'mega-menu-widget-area-' . $item->ID );
                                             echo "</div>";
                                         echo "</div>";
                                     }
