@@ -19,7 +19,9 @@ function wpmm_init() {
                     register_sidebar( array(
                         'id'   => 'mega-menu-widget-area-' . $item->ID,
                         'name' => $item->title . ' - Mega Menu',
-                    ) );
+                        'before_widget' => '',
+                        'after_widget' => '', 
+                      ) );
                 }
             }
         }
