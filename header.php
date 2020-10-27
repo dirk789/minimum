@@ -95,7 +95,7 @@ function casanhaheader_function() {
                         if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
                             foreach ( $items as $item ) {
                                 echo "<li>";
-                                    echo "<a href=\"{$item->url}\">{$item->title}</a>";
+                                    echo "<a class=\"mobile-title\" href=\"{$item->url}\">{$item->title}</a>";
                                     if ( is_active_sidebar( 'mobile-mega-menu-widget-area-' . $item->ID ) ) {
                                         echo "<div class=\"mega-menu mega-menu__mobile\">";
                                             echo "<div class=\"mega-menu-inner\">";
