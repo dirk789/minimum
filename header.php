@@ -97,7 +97,16 @@ function casanhaheader_function() {
                         $menu = get_term( $locations[ 'mega_menu' ], 'nav_menu' );
                         if ( $items = wp_get_nav_menu_items( $menu->name ) ) {
                             foreach ( $items as $item ) {
-                                echo "<li>";
+                                // echo "<li "; 
+
+                                if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
+                                    echo "<li class=\"is-mega\">";
+                                } else {
+                                    echo "<li>";
+                                }
+
+                                // echo ">";
+
                                     echo "<a class=\"mobile-title\" href=\"{$item->url}\">{$item->title}</a>";
                                     if ( is_active_sidebar( 'mega-menu-widget-area-' . $item->ID ) ) {
                                         echo "<div class=\"mega-menu mega-menu__mobile\">";
