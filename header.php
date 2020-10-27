@@ -1,9 +1,10 @@
 <?php 
 
 function casanhaheader_function() {
-    echo'
+   
+    echo "
     <header>
-            <ul class="casanha-mega-menu">';
+            <ul class=\"casanha-mega-menu\">";
                 
                     $locations = get_nav_menu_locations();
                     if ( isset( $locations[ 'mega_menu' ] ) ) {
@@ -21,10 +22,13 @@ function casanhaheader_function() {
                             }
                         }
                     }
-                echo'
+                    
+                echo "
             </ul>
-        </header> '
-        
+        </header>
+        ";
+
+        return $html;
 }
 
 add_shortcode('casanhaheader', 'casanhaheader_function');
