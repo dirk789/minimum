@@ -36,4 +36,4 @@ function my_login_stylesheet() {
 add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 //Mega menu PHP Files
-require 'menu.php';
+include( plugin_dir_path( __FILE__ ) . 'menu.php');
