@@ -49,7 +49,7 @@ function casanhaheader_function() {
                     }
 
                 echo "</ul>  
-        </nav>"; 
+        "; 
 
         //shopping cart
         echo " 
@@ -62,6 +62,7 @@ function casanhaheader_function() {
         woocommerce_mini_cart();
 
         echo "
+            </nav>
          </div>
         </div>";
 
