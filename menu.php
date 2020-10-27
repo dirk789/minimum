@@ -30,4 +30,4 @@ function wpmm_init() {
 add_action( 'widgets_init', 'wpmm_init' );
 
 // get html shortcode
-//include( plugin_dir_path( __FILE__ ) . 'header.php');
+include( plugin_dir_path( __FILE__ ) . 'header.php');
