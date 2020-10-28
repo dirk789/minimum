@@ -16,7 +16,6 @@ function theme_gsap_script() {
     wp_enqueue_script( 'gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array(), false, true );
     wp_enqueue_script( 'gsap-scroll-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js', array(), false, true );
     wp_enqueue_script( 'gsap-js2', plugin_dir_url( __FILE__ ) . '/js/script.js', array(), false, true );
-    wp_enqueue_script( 'instant_search', 'https://cdn.jsdelivr.net/npm/instantsearch.js', array(), false, true );
 
     //swiperjs
     // wp_register_style( 'swipercss', 'https://unpkg.com/swiper/swiper-bundle.min.css' );
