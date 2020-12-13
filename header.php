@@ -101,6 +101,8 @@ function casanhaheader_function() {
         echo "
         <div class=\"mobile-menu-button\">";
 
+        echo '<a href="/shop?focus=true"><svg fill="none" class="mobile__search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28"><defs/><path d="M11.573 1.154a10.573 10.573 0 100 21.147 10.573 10.573 0 000-21.147v0z" stroke="#000" stroke-width="1.917" stroke-miterlimit="10"/><path d="M19.462 19.616L26.846 27" stroke="#000" stroke-width="1.917" stroke-miterlimit="10" stroke-linecap="round"/></svg></a>';
+
        echo "<a href=\"/cart\"><div class=\"header__class-count\">";
                 
         //svg Cart
