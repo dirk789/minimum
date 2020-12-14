@@ -35,18 +35,18 @@ add_action( 'login_enqueue_scripts', 'my_login_stylesheet' );
 
 
 // custom flags
-add_filter( 'trp_flags_path', 'trpc_flags_path', 10, 2 );
-function trpc_flags_path( $original_flags_path,  $language_code ){
+// add_filter( 'trp_flags_path', 'trpc_flags_path', 10, 2 );
+// function trpc_flags_path( $original_flags_path,  $language_code ){
 
-	// only change the folder path for the following languages:
-	$languages_with_custom_flags = array( 'en_US', 'vi' );
+// 	// only change the folder path for the following languages:
+// 	$languages_with_custom_flags = array( 'en_US', 'vi' );
 
-	if ( in_array( $language_code, $languages_with_custom_flags ) ) {
-		return  plugin_dir_url( __FILE__ ) . '/flags/' ;
-	}else{
-		return $original_flags_path;
-	}
-}
+// 	if ( in_array( $language_code, $languages_with_custom_flags ) ) {
+// 		return  plugin_dir_url( __FILE__ ) . '/flags/' ;
+// 	}else{
+// 		return $original_flags_path;
+// 	}
+// }
 
 //Mega menu PHP Files
 include( plugin_dir_path( __FILE__ ) . 'menu.php');
